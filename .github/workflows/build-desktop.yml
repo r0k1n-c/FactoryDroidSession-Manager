@@ -3,6 +3,8 @@ name: Build Desktop App
 on:
   workflow_dispatch:
   push:
+    tags:
+      - 'v*'
     paths:
       - 'session-manager.py'
       - 'session-manager-desktop.py'
@@ -42,5 +44,31 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: session-manager-${{ matrix.os }}
+          name: release-${{ matrix.os }}
           path: release/*
+          if-no-files-found: error
+
+  publish-release:
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: release-*
+          path: release-assets
+          merge-multiple: true
+
+      - name: Publish artifacts to GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "${GITHUB_REF_NAME}" >/dev/null 2>&1; then
+            gh release upload "${GITHUB_REF_NAME}" release-assets/* --clobber
+          else
+            gh release create "${GITHUB_REF_NAME}" release-assets/* --title "${GITHUB_REF_NAME}" --generate-notes
+          fi
