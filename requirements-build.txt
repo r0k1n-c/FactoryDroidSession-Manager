@@ -1,0 +1,3 @@
+# Desktop packaging dependency
+# Used by: build-desktop.py
+pyinstaller>=6.0

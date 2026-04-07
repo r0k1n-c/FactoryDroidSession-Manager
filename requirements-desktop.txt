@@ -1,0 +1,3 @@
+# Desktop runtime dependency
+# Used by: session-manager-desktop.py
+pywebview>=5.0

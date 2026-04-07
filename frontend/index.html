@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Factory Droid Session Manager</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <h1 id="appTitle"></h1>
+    <div class="stats-bar" id="globalStats"></div>
+  </div>
+  <div class="header-right">
+    <button class="toggle-btn lang-btn" id="langBtn" onclick="toggleLang()" title="Switch language"></button>
+    <button class="toggle-btn" id="themeBtn" onclick="toggleTheme()" title="Switch theme"></button>
+  </div>
+</div>
+
+<div class="container">
+  <div class="section-head">
+    <div class="tabs">
+      <div class="tab active" data-tab="sessions" onclick="switchTab('sessions')" data-i18n="tabSessions"></div>
+      <div class="tab" data-tab="analytics" onclick="switchTab('analytics')" data-i18n="tabAnalytics"></div>
+    </div>
+    <div class="section-head-controls">
+      <div class="toolbar-status" id="refreshStatus"></div>
+      <label class="refresh-control">
+        <span class="refresh-control-label" data-i18n="refreshEveryLabel"></span>
+        <span class="refresh-input-wrap">
+          <input class="refresh-input" id="refreshIntervalInput" type="number" min="1" max="3600" step="1" onchange="setRefreshInterval(this.value)">
+          <span class="refresh-unit" data-i18n="secondsUnit"></span>
+        </span>
+      </label>
+    </div>
+  </div>
+
+  <div id="tab-sessions">
+    <div class="toolbar">
+      <label class="toolbar-search">
+        <span class="toolbar-search-icon">⌕</span>
+        <input class="search-box" id="searchInput" oninput="handleSearchInput()" data-i18n-ph="searchPlaceholder">
+      </label>
+      <select class="sort-select" id="sortSelect" onchange="setSort(this.value)"></select>
+      <button class="btn-clear-empty" onclick="clearEmptySessions()" data-i18n="clearEmpty"></button>
+      <div class="view-toggle">
+        <button class="active" onclick="setView('grid',this)" data-i18n="viewGrid"></button>
+        <button onclick="setView('list',this)" data-i18n="viewList"></button>
+      </div>
+    </div>
+    <div class="ws-pills" id="wsPills"></div>
+    <div id="sessionContainer" class="grid-view">
+      <div class="grid" id="sessionGrid"></div>
+    </div>
+  </div>
+
+  <div id="tab-analytics" style="display:none">
+    <div class="charts" id="chartsArea"></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" onclick="event.stopPropagation()">
+    <div class="modal-header">
+      <h2 id="modalTitle"></h2>
+      <button class="modal-close" onclick="hideModal()">&times;</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<div class="confirm-overlay" id="confirmOverlay">
+  <div class="confirm-box">
+    <h3 data-i18n="deleteTitle"></h3>
+    <p id="confirmText"></p>
+    <div class="btns">
+      <button class="btn-cancel" onclick="hideConfirm()" data-i18n="cancel"></button>
+      <button class="btn-danger" id="confirmDeleteBtn" data-i18n="delete"></button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

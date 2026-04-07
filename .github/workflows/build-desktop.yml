@@ -1,0 +1,46 @@
+name: Build Desktop App
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'session-manager.py'
+      - 'session-manager-desktop.py'
+      - 'build-desktop.py'
+      - 'requirements-desktop.txt'
+      - 'requirements-build.txt'
+      - '.github/workflows/build-desktop.yml'
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-desktop.txt -r requirements-build.txt
+
+      - name: Self-test desktop server bootstrap
+        run: python session-manager-desktop.py --self-test
+
+      - name: Build packaged app
+        run: python build-desktop.py
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: session-manager-${{ matrix.os }}
+          path: release/*
