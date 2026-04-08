@@ -20,7 +20,7 @@ from urllib.request import Request, urlopen
 from datetime import datetime
 
 PORT = 18901
-APP_VERSION = 'v0.1.2'
+APP_VERSION = 'v0.1.3'
 GITHUB_REPO_URL = 'https://github.com/r0k1n-c/FactoryDroidSession-Manager'
 GITHUB_RELEASES_LATEST_API = 'https://api.github.com/repos/r0k1n-c/FactoryDroidSession-Manager/releases/latest'
 UPDATE_CHECK_CACHE_TTL_SECONDS = 900
