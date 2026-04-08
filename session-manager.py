@@ -14,10 +14,16 @@ import time
 import webbrowser
 from collections import deque
 from http.server import HTTPServer, BaseHTTPRequestHandler
+from urllib.error import URLError
 from urllib.parse import urlparse, parse_qs, unquote
+from urllib.request import Request, urlopen
 from datetime import datetime
 
 PORT = 18901
+APP_VERSION = 'v0.1.2'
+GITHUB_REPO_URL = 'https://github.com/r0k1n-c/FactoryDroidSession-Manager'
+GITHUB_RELEASES_LATEST_API = 'https://api.github.com/repos/r0k1n-c/FactoryDroidSession-Manager/releases/latest'
+UPDATE_CHECK_CACHE_TTL_SECONDS = 900
 SCRIPT_PATH = os.path.realpath(__file__)
 SCRIPT_DIR = os.path.dirname(SCRIPT_PATH)
 SCRIPT_NAME = os.path.basename(SCRIPT_PATH)
@@ -30,6 +36,10 @@ SYSTEM_BLOCK_RE = re.compile(r'<system-(?:reminder|notification)>.*?</system-(?:
 SYSTEM_TAG_RE = re.compile(r'</?system-[^>]+>')
 SESSION_PREVIEW_CANDIDATE_LIMIT = 32
 SESSION_SUMMARY_CACHE = {}
+UPDATE_CHECK_CACHE = {
+    'expires_at': 0.0,
+    'value': None,
+}
 
 
 def normalize_path(path):
@@ -98,6 +108,69 @@ def truncate_preview_text(text, limit):
     if len(text) <= limit:
         return text
     return text[:max(0, limit - 1)].rstrip() + '…'
+
+
+def version_sort_key(version):
+    cleaned = re.sub(r'^[^0-9]*', '', (version or '').strip())
+    if not cleaned:
+        return ()
+    main = cleaned.split('-', 1)[0].split('+', 1)[0]
+    parts = []
+    for piece in main.split('.'):
+        digits = ''.join(ch for ch in piece if ch.isdigit())
+        parts.append(int(digits or '0'))
+    while len(parts) < 3:
+        parts.append(0)
+    return tuple(parts)
+
+
+def fetch_latest_release_info():
+    request = Request(
+        GITHUB_RELEASES_LATEST_API,
+        headers={
+            'Accept': 'application/vnd.github+json',
+            'User-Agent': f'FactoryDroidSessionManager/{APP_VERSION}',
+        },
+    )
+    with urlopen(request, timeout=3) as response:
+        data = json.load(response)
+    latest_version = str(data.get('tag_name', '')).strip()
+    if not latest_version:
+        raise RuntimeError('Latest release tag not found.')
+    release_url = str(data.get('html_url', '')).strip() or f'{GITHUB_REPO_URL}/releases/latest'
+    return {
+        'latestVersion': latest_version,
+        'releaseUrl': release_url,
+    }
+
+
+def get_update_check_info():
+    now = time.time()
+    cached_value = UPDATE_CHECK_CACHE.get('value')
+    if cached_value and UPDATE_CHECK_CACHE.get('expires_at', 0) > now:
+        return dict(cached_value)
+
+    info = {
+        'ok': True,
+        'currentVersion': APP_VERSION,
+        'latestVersion': '',
+        'updateAvailable': False,
+        'repoUrl': GITHUB_REPO_URL,
+        'releaseUrl': f'{GITHUB_REPO_URL}/releases/latest',
+        'error': '',
+    }
+    try:
+        latest_info = fetch_latest_release_info()
+        info.update(latest_info)
+        info['updateAvailable'] = version_sort_key(info['latestVersion']) > version_sort_key(APP_VERSION)
+        UPDATE_CHECK_CACHE['expires_at'] = now + UPDATE_CHECK_CACHE_TTL_SECONDS
+    except (OSError, URLError, ValueError, RuntimeError) as exc:
+        info['ok'] = False
+        info['error'] = str(exc)
+        UPDATE_CHECK_CACHE['expires_at'] = now + 60
+
+    UPDATE_CHECK_CACHE['value'] = dict(info)
+    return info
 
 
 def stringify_tool_value(value):
@@ -907,6 +980,8 @@ class Handler(BaseHTTPRequestHandler):
                 self._json_response({'ok': True, **data})
             except Exception as exc:
                 self._json_response({'ok': False, 'error': str(exc)})
+        elif parsed.path == '/api/check_update':
+            self._json_response(get_update_check_info())
         else:
             self._send_empty(404)
 

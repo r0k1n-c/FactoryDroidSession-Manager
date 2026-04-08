@@ -62,6 +62,13 @@ const I18N = {
     toolResult: 'Result',
     toolResultError: 'Error',
     toolResultOk: 'OK',
+    versionCurrent: 'Current version {version}',
+    versionLatest: 'Latest release {version}',
+    updateAvailable: 'Update available: {version}',
+    alreadyLatest: 'Already on latest release',
+    updateCheckFailed: 'Update check unavailable',
+    repoLabel: 'GitHub',
+    releaseLink: 'Release',
   },
   zh: {
     appTitle: 'Factory Droid Session 管理面板',
@@ -123,6 +130,13 @@ const I18N = {
     toolResult: '结果',
     toolResultError: '错误',
     toolResultOk: '成功',
+    versionCurrent: '当前版本 {version}',
+    versionLatest: '最新发布 {version}',
+    updateAvailable: '发现新版本：{version}',
+    alreadyLatest: '当前已是最新发布版本',
+    updateCheckFailed: '暂时无法检查更新',
+    repoLabel: 'GitHub',
+    releaseLink: '版本页',
   }
 };
 let lang = localStorage.getItem('fsm-lang') || (navigator.language.startsWith('zh') ? 'zh' : 'en');
@@ -152,6 +166,7 @@ function applyI18n() {
   }
   document.title = t('appTitle');
   updateRefreshStatus(isLoadingSessions);
+  renderAppMeta();
 }
 
 function toggleLang() {
@@ -208,6 +223,17 @@ let detailExpandedMessages = new Set();
 let detailExpandedToolGroups = new Set();
 let detailPromptSummaryExpanded = false;
 let currentDetailData = null;
+const DEFAULT_REPO_URL = 'https://github.com/r0k1n-c/FactoryDroidSession-Manager';
+let appMeta = {
+  loaded: false,
+  ok: false,
+  currentVersion: '',
+  latestVersion: '',
+  updateAvailable: false,
+  repoUrl: DEFAULT_REPO_URL,
+  releaseUrl: `${DEFAULT_REPO_URL}/releases/latest`,
+  error: '',
+};
 
 function loadPathAliases(){
   try{
@@ -462,6 +488,51 @@ function syncRefreshIntervalInput(){
 
 function formatRefreshTime(d){
   return d.toLocaleTimeString(lang==='zh'?'zh-CN':'en-US',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+}
+
+function displayRepoUrl(url){
+  return (url||DEFAULT_REPO_URL).replace(/^https?:\/\//,'');
+}
+
+function renderAppMeta(){
+  const el=document.getElementById('appMetaBar');
+  if(!el)return;
+  const currentVersion=appMeta.currentVersion||'—';
+  const latestVersion=appMeta.latestVersion||'';
+  const repoUrl=appMeta.repoUrl||DEFAULT_REPO_URL;
+  const releaseUrl=appMeta.releaseUrl||`${repoUrl}/releases/latest`;
+  let statusHtml='';
+  if(appMeta.loaded){
+    if(appMeta.updateAvailable&&latestVersion){
+      statusHtml=`<a class="app-meta-pill app-meta-pill-accent" href="${releaseUrl}" target="_blank" rel="noreferrer">${esc(t('updateAvailable',{version:latestVersion}))}</a>`;
+    }else if(latestVersion){
+      statusHtml=`<span class="app-meta-pill">${esc(t('alreadyLatest'))}</span>`;
+    }else if(appMeta.error){
+      statusHtml=`<span class="app-meta-pill app-meta-pill-warn">${esc(t('updateCheckFailed'))}</span>`;
+    }
+  }
+  el.innerHTML=`<div class="app-meta-content">
+    <div class="app-meta-group">
+      <span class="app-meta-pill">${esc(t('versionCurrent',{version:currentVersion}))}</span>
+      ${latestVersion?`<span class="app-meta-pill">${esc(t('versionLatest',{version:latestVersion}))}</span>`:''}
+      ${statusHtml}
+    </div>
+    <div class="app-meta-group app-meta-links">
+      <a class="app-meta-link" href="${repoUrl}" target="_blank" rel="noreferrer">${esc(t('repoLabel'))}: ${esc(displayRepoUrl(repoUrl))}</a>
+      <a class="app-meta-link" href="${releaseUrl}" target="_blank" rel="noreferrer">${esc(t('releaseLink'))}</a>
+    </div>
+  </div>`;
+}
+
+async function loadAppMeta(){
+  try{
+    const res=await fetch('/api/check_update');
+    const data=await res.json();
+    appMeta={...appMeta,...data,loaded:true};
+  }catch(_err){
+    appMeta={...appMeta,loaded:true,ok:false,error:'request-failed'};
+  }
+  renderAppMeta();
 }
 
 function updateRefreshStatus(refreshing=false){
@@ -1255,5 +1326,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){hideModal();hideCon
 
 applyTheme();
 applyI18n();
+renderAppMeta();
 startAutoRefresh();
+loadAppMeta();
 loadSessions();
