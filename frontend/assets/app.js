@@ -69,6 +69,68 @@ const I18N = {
     updateCheckFailed: 'Update check unavailable',
     repoLabel: 'GitHub',
     releaseLink: 'Release',
+    serverPort: 'Port {port}',
+    sessionsDir: 'Sessions {path}',
+    favoritesOnly: 'Favorites only',
+    favorite: 'Favorite',
+    unfavorite: 'Unfavorite',
+    editTags: 'Edit tags',
+    tagsPrompt: 'Set tags for this session. Separate with commas.',
+    tagsSaved: 'Tags updated.',
+    exportListJson: 'Export list JSON',
+    exportListMarkdown: 'Export list MD',
+    exportSessionJson: 'Export session JSON',
+    exportSessionMarkdown: 'Export session MD',
+    noSessionsToExport: 'No sessions to export.',
+    noSessionLoaded: 'No session loaded.',
+    tagsLabel: 'Tags',
+    favoriteBadge: 'Favorite',
+    scrollToTop: 'Scroll to top',
+    sortCustom: 'Sort: Custom',
+    shortcutHelp: 'Shortcuts',
+    shortcutOpen: 'Open shortcuts',
+    themeDark: 'Dark',
+    themeLight: 'Light',
+    themeAuto: 'Auto',
+    themeMode: 'Theme: {mode}',
+    selectionMode: 'Select',
+    selectionCount: '{count} selected',
+    selectAll: 'Select all',
+    clearSelection: 'Clear selection',
+    bulkExportJson: 'Export selected JSON',
+    bulkExportMarkdown: 'Export selected MD',
+    bulkFavorite: 'Favorite selected',
+    bulkUnfavorite: 'Unfavorite selected',
+    bulkDelete: 'Delete selected',
+    bulkDeleteTitle: 'Delete selected sessions',
+    bulkDeleteConfirm: 'Delete {count} selected session(s)? This cannot be undone.',
+    bulkDeleteDone: 'Deleted {count} session(s).',
+    bulkDeleteNone: 'No sessions selected.',
+    bulkFavoriteDone: 'Favorited {count} session(s).',
+    bulkUnfavoriteDone: 'Unfavorited {count} session(s).',
+    organizeMode: 'Organize',
+    groupedView: 'Groups',
+    newGroup: 'New group',
+    newGroupPrompt: 'Enter a group name.',
+    newGroupCreated: 'Group "{name}" created.',
+    newGroupExists: 'Group already exists.',
+    resetLayout: 'Reset layout',
+    resetLayoutDone: 'Custom layout reset.',
+    groupUngrouped: 'Ungrouped',
+    chartMessageTrend: 'Message Trend',
+    trendDay: 'Day',
+    trendWeek: 'Week',
+    trendMessages: 'Messages',
+    trendSessions: 'Sessions',
+    searchFocus: 'Focus search',
+    shortcutViewGrid: 'Switch to grid view',
+    shortcutViewList: 'Switch to list view',
+    shortcutTheme: 'Cycle theme mode',
+    shortcutFavorites: 'Toggle favorites only',
+    shortcutSelection: 'Toggle selection mode',
+    shortcutOrganize: 'Toggle organize mode',
+    shortcutGroups: 'Toggle group view',
+    shortcutSelectAll: 'Select all filtered sessions',
   },
   zh: {
     appTitle: 'Factory Droid Session 管理面板',
@@ -137,6 +199,68 @@ const I18N = {
     updateCheckFailed: '暂时无法检查更新',
     repoLabel: 'GitHub',
     releaseLink: '版本页',
+    serverPort: '端口 {port}',
+    sessionsDir: '会话目录 {path}',
+    favoritesOnly: '只看收藏',
+    favorite: '收藏',
+    unfavorite: '取消收藏',
+    editTags: '编辑标签',
+    tagsPrompt: '为这个会话设置标签，使用逗号分隔。',
+    tagsSaved: '标签已更新。',
+    exportListJson: '导出列表 JSON',
+    exportListMarkdown: '导出列表 MD',
+    exportSessionJson: '导出会话 JSON',
+    exportSessionMarkdown: '导出会话 MD',
+    noSessionsToExport: '没有可导出的会话。',
+    noSessionLoaded: '当前没有已加载的会话。',
+    tagsLabel: '标签',
+    favoriteBadge: '已收藏',
+    scrollToTop: '回到顶部',
+    sortCustom: '排序：自定义',
+    shortcutHelp: '快捷键',
+    shortcutOpen: '打开快捷键说明',
+    themeDark: '深色',
+    themeLight: '浅色',
+    themeAuto: '自动',
+    themeMode: '主题：{mode}',
+    selectionMode: '选择模式',
+    selectionCount: '已选 {count} 项',
+    selectAll: '全选',
+    clearSelection: '清空选择',
+    bulkExportJson: '导出所选 JSON',
+    bulkExportMarkdown: '导出所选 MD',
+    bulkFavorite: '收藏所选',
+    bulkUnfavorite: '取消收藏所选',
+    bulkDelete: '删除所选',
+    bulkDeleteTitle: '删除所选会话',
+    bulkDeleteConfirm: '确定删除已选择的 {count} 个会话吗？此操作不可撤销。',
+    bulkDeleteDone: '已删除 {count} 个会话。',
+    bulkDeleteNone: '当前没有选中的会话。',
+    bulkFavoriteDone: '已收藏 {count} 个会话。',
+    bulkUnfavoriteDone: '已取消收藏 {count} 个会话。',
+    organizeMode: '整理模式',
+    groupedView: '分组视图',
+    newGroup: '新建分组',
+    newGroupPrompt: '请输入分组名称。',
+    newGroupCreated: '已创建分组“{name}”。',
+    newGroupExists: '该分组已存在。',
+    resetLayout: '重置布局',
+    resetLayoutDone: '已重置自定义布局。',
+    groupUngrouped: '未分组',
+    chartMessageTrend: '消息趋势',
+    trendDay: '按日',
+    trendWeek: '按周',
+    trendMessages: '消息数',
+    trendSessions: '会话数',
+    searchFocus: '聚焦搜索框',
+    shortcutViewGrid: '切换到卡片视图',
+    shortcutViewList: '切换到列表视图',
+    shortcutTheme: '切换主题模式',
+    shortcutFavorites: '切换只看收藏',
+    shortcutSelection: '切换选择模式',
+    shortcutOrganize: '切换整理模式',
+    shortcutGroups: '切换分组视图',
+    shortcutSelectAll: '全选当前筛选结果',
   }
 };
 let lang = localStorage.getItem('fsm-lang') || (navigator.language.startsWith('zh') ? 'zh' : 'en');
@@ -155,9 +279,7 @@ function applyI18n() {
     el.placeholder = t(el.dataset.i18nPh);
   });
   document.getElementById('langBtn').textContent = lang === 'zh' ? 'EN' : '中';
-  const sel=document.getElementById('sortSelect');
-  sel.innerHTML=[['time','sortTime'],['tokens','sortTokens'],['messages','sortMessages'],['size','sortSize'],['workspace','sortWorkspace']]
-    .map(([v,k])=>`<option value="${v}"${activeSort===v?' selected':''}>${t(k)}</option>`).join('');
+  syncSortOptions();
   const titleEl = document.getElementById('appTitle');
   if (lang === 'zh') {
     titleEl.innerHTML = '<span>Factory Droid</span> Session 管理面板';
@@ -166,7 +288,13 @@ function applyI18n() {
   }
   document.title = t('appTitle');
   updateRefreshStatus(isLoadingSessions);
+  syncHeaderRepoLink();
+  syncScrollTopButtonLabel();
+  syncShortcutButtonLabel();
+  updateThemeButton();
   renderAppMeta();
+  updateFavoritesOnlyButton();
+  renderSessionActionBar();
 }
 
 function toggleLang() {
@@ -178,17 +306,50 @@ function toggleLang() {
 }
 
 /* ========== Theme ========== */
+const THEME_SEQUENCE = ['dark','light','auto'];
+const systemThemeMedia = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
 let theme = localStorage.getItem('fsm-theme') || 'dark';
+let effectiveTheme = 'dark';
 
-function applyTheme() {
-  document.documentElement.setAttribute('data-theme', theme);
-  document.getElementById('themeBtn').innerHTML = theme === 'dark'
+function getEffectiveTheme(){
+  if(theme==='auto'){
+    return systemThemeMedia && systemThemeMedia.matches ? 'dark' : 'light';
+  }
+  return theme==='light' ? 'light' : 'dark';
+}
+
+function syncSortOptions(){
+  const sel=document.getElementById('sortSelect');
+  if(!sel)return;
+  sel.innerHTML=[['time','sortTime'],['tokens','sortTokens'],['messages','sortMessages'],['size','sortSize'],['workspace','sortWorkspace'],['custom','sortCustom']]
+    .map(([v,k])=>`<option value="${v}"${activeSort===v?' selected':''}>${t(k)}</option>`).join('');
+}
+
+function updateThemeButton() {
+  const btn=document.getElementById('themeBtn');
+  if(!btn)return;
+  const modeLabel=t(theme==='auto'?'themeAuto':theme==='light'?'themeLight':'themeDark');
+  const effective=getEffectiveTheme();
+  const icon = effective === 'dark'
     ? '<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 1zm0 10a3 3 0 100-6 3 3 0 000 6zm5.657-7.657a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0zM15 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0115 8zM4 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 014 8zm8.657 4.536a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0zm-9.193-9.193a.75.75 0 010 1.06L2.403 5.464a.75.75 0 01-1.06-1.06l1.06-1.061a.75.75 0 011.061 0zM8 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13z"/></svg>'
     : '<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786z"/></svg>';
+  btn.innerHTML = `${icon}${theme==='auto'?'<span class="theme-mode-badge">A</span>':''}`;
+  btn.title = t('themeMode',{mode:modeLabel});
+  btn.setAttribute('aria-label', t('themeMode',{mode:modeLabel}));
+}
+
+function applyTheme() {
+  effectiveTheme = getEffectiveTheme();
+  document.documentElement.setAttribute('data-theme', effectiveTheme);
+  document.documentElement.setAttribute('data-theme-mode', theme);
+  updateThemeButton();
+  analyticsDirty = true;
+  if(activeTab === 'analytics')ensureAnalyticsRendered();
 }
 
 function toggleTheme() {
-  theme = theme === 'dark' ? 'light' : 'dark';
+  const idx = THEME_SEQUENCE.indexOf(theme);
+  theme = THEME_SEQUENCE[(idx + 1) % THEME_SEQUENCE.length];
   localStorage.setItem('fsm-theme', theme);
   applyTheme();
 }
@@ -202,6 +363,17 @@ const DEFAULT_REFRESH_INTERVAL_MS = 5000;
 const MIN_REFRESH_INTERVAL_MS = 1000;
 const MAX_REFRESH_INTERVAL_MS = 3600000;
 const PATH_ALIAS_STORAGE_KEY = 'fsm-path-aliases';
+const SESSION_MARKS_STORAGE_KEY = 'fsm-session-marks';
+const FAVORITES_ONLY_STORAGE_KEY = 'fsm-favorites-only';
+const VIEW_MODE_STORAGE_KEY = 'fsm-view-mode';
+const CUSTOM_LAYOUT_STORAGE_KEY = 'fsm-custom-layout';
+const CUSTOM_GROUPED_STORAGE_KEY = 'fsm-custom-grouped';
+const VIRTUALIZATION_THRESHOLD = 200;
+const GRID_CARD_MIN_WIDTH = 380;
+const GRID_CARD_GAP = 16;
+const VIRTUAL_GRID_ROW_HEIGHT = 286;
+const VIRTUAL_LIST_ROW_HEIGHT = 84;
+const VIRTUAL_OVERSCAN_ROWS = 4;
 let lastRefreshAt = null;
 let isLoadingSessions = false;
 let queuedRefresh = false;
@@ -224,6 +396,24 @@ let detailExpandedToolGroups = new Set();
 let detailPromptSummaryExpanded = false;
 let currentDetailData = null;
 const DEFAULT_REPO_URL = 'https://github.com/r0k1n-c/FactoryDroidSession-Manager';
+let favoritesOnly = localStorage.getItem(FAVORITES_ONLY_STORAGE_KEY) === '1';
+let sessionMarks = loadSessionMarks();
+let viewMode = localStorage.getItem(VIEW_MODE_STORAGE_KEY) || 'grid';
+let selectionMode = false;
+let selectedSessionKeys = new Set();
+let organizeMode = false;
+let customGroupedView = localStorage.getItem(CUSTOM_GROUPED_STORAGE_KEY) === '1';
+let analyticsTrendGranularity = 'day';
+let customLayout = loadCustomLayout();
+let dragSessionKey = '';
+let toastCounter = 0;
+let toastTimers = new Map();
+let virtualState = {
+  active: false,
+  list: [],
+  signature: '',
+  frame: null,
+};
 let appMeta = {
   loaded: false,
   ok: false,
@@ -249,6 +439,189 @@ function loadPathAliases(){
 
 function savePathAliases(){
   localStorage.setItem(PATH_ALIAS_STORAGE_KEY, JSON.stringify(pathAliases));
+}
+
+function loadSessionMarks(){
+  try{
+    const raw=localStorage.getItem(SESSION_MARKS_STORAGE_KEY);
+    if(!raw)return {};
+    const parsed=JSON.parse(raw);
+    if(!parsed || typeof parsed!=='object' || Array.isArray(parsed))return {};
+    const result={};
+    Object.entries(parsed).forEach(([key,value])=>{
+      if(!key || !value || typeof value!=='object')return;
+      const favorite=Boolean(value.favorite);
+      const tags=normalizeTagList(Array.isArray(value.tags)?value.tags.join(','):value.tags||'');
+      if(favorite||tags.length){
+        result[key]={favorite,tags};
+      }
+    });
+    return result;
+  }catch(_err){
+    return {};
+  }
+}
+
+function saveSessionMarks(){
+  localStorage.setItem(SESSION_MARKS_STORAGE_KEY, JSON.stringify(sessionMarks));
+}
+
+function loadCustomLayout(){
+  const fallback={order:[],groups:[{id:'ungrouped',name:''}],sessionGroups:{}};
+  try{
+    const raw=localStorage.getItem(CUSTOM_LAYOUT_STORAGE_KEY);
+    if(!raw)return fallback;
+    const parsed=JSON.parse(raw);
+    if(!parsed || typeof parsed!=='object')return fallback;
+    const seenGroups=new Set(['ungrouped']);
+    const groups=[{id:'ungrouped',name:''}];
+    if(Array.isArray(parsed.groups)){
+      parsed.groups.forEach(group=>{
+        if(!group || typeof group!=='object')return;
+        const id=String(group.id||'').trim();
+        if(!id || seenGroups.has(id))return;
+        seenGroups.add(id);
+        groups.push({id,name:String(group.name||'').trim()});
+      });
+    }
+    const sessionGroups={};
+    Object.entries(parsed.sessionGroups||{}).forEach(([key,value])=>{
+      const groupId=String(value||'').trim() || 'ungrouped';
+      sessionGroups[key]=seenGroups.has(groupId) ? groupId : 'ungrouped';
+    });
+    const order=[...new Set(Array.isArray(parsed.order)?parsed.order.filter(v=>typeof v==='string'&&v.trim()):[])];
+    return {order,groups,sessionGroups};
+  }catch(_err){
+    return fallback;
+  }
+}
+
+function saveCustomLayout(){
+  localStorage.setItem(CUSTOM_LAYOUT_STORAGE_KEY, JSON.stringify(customLayout));
+}
+
+function syncCustomLayoutWithSessions(){
+  const validKeys=new Set(allSessions.map(s=>sessionKey(s.workspace,s.id)));
+  customLayout.order=customLayout.order.filter(key=>validKeys.has(key));
+  allSessions.forEach(session=>{
+    const key=sessionKey(session.workspace, session.id);
+    if(!customLayout.order.includes(key))customLayout.order.push(key);
+    if(!customLayout.sessionGroups[key])customLayout.sessionGroups[key]='ungrouped';
+  });
+  Object.keys(customLayout.sessionGroups).forEach(key=>{
+    if(!validKeys.has(key))delete customLayout.sessionGroups[key];
+  });
+  saveCustomLayout();
+}
+
+function getCustomGroupEntries(){
+  return customLayout.groups.map(group=>({
+    ...group,
+    label:group.id==='ungrouped'?t('groupUngrouped'):(group.name||group.id),
+  }));
+}
+
+function getSessionGroupIdByKey(key){
+  return customLayout.sessionGroups[key] || 'ungrouped';
+}
+
+function setSessionGroupIdByKey(key, groupId){
+  customLayout.sessionGroups[key]=groupId || 'ungrouped';
+  saveCustomLayout();
+}
+
+function getCustomOrderMap(){
+  return new Map(customLayout.order.map((key,index)=>[key,index]));
+}
+
+function moveCustomKeyBefore(sourceKey, targetKey){
+  if(!sourceKey || !targetKey || sourceKey===targetKey)return;
+  const order=customLayout.order.filter(key=>key!==sourceKey);
+  const targetIndex=order.indexOf(targetKey);
+  if(targetIndex===-1){
+    order.push(sourceKey);
+  }else{
+    order.splice(targetIndex, 0, sourceKey);
+  }
+  customLayout.order=order;
+  saveCustomLayout();
+}
+
+function moveCustomKeyToEnd(sourceKey){
+  if(!sourceKey)return;
+  customLayout.order=customLayout.order.filter(key=>key!==sourceKey);
+  customLayout.order.push(sourceKey);
+  saveCustomLayout();
+}
+
+function createCustomGroup(){
+  const value=prompt(t('newGroupPrompt'), '');
+  if(value===null)return;
+  const name=value.trim();
+  if(!name)return;
+  const exists=getCustomGroupEntries().some(group=>group.label.toLocaleLowerCase()===name.toLocaleLowerCase());
+  if(exists){
+    showToast(t('newGroupExists'),'warning');
+    return;
+  }
+  const id=`group-${Date.now().toString(36)}`;
+  customLayout.groups.push({id,name});
+  saveCustomLayout();
+  showToast(t('newGroupCreated',{name}),'success');
+  renderSessionActionBar();
+  renderSessions();
+}
+
+function resetCustomLayout(){
+  customLayout={order:[],groups:[{id:'ungrouped',name:''}],sessionGroups:{}};
+  syncCustomLayoutWithSessions();
+  showToast(t('resetLayoutDone'),'success');
+  renderSessionActionBar();
+  renderSessions();
+}
+
+function normalizeTagList(value){
+  const pieces=String(value||'').split(/[\n,，]/);
+  const seen=new Set();
+  const tags=[];
+  pieces.forEach(piece=>{
+    const tag=piece.trim();
+    const key=tag.toLocaleLowerCase();
+    if(!tag || seen.has(key))return;
+    seen.add(key);
+    tags.push(tag);
+  });
+  return tags;
+}
+
+function getSessionMark(session){
+  if(!session)return {favorite:false,tags:[]};
+  const value=sessionMarks[sessionKey(session.workspace, session.id)];
+  return {
+    favorite:Boolean(value&&value.favorite),
+    tags:Array.isArray(value&&value.tags)?value.tags:[],
+  };
+}
+
+function isFavoriteSession(session){
+  return getSessionMark(session).favorite;
+}
+
+function getSessionTags(session){
+  return getSessionMark(session).tags;
+}
+
+function updateSessionMark(session, nextMark){
+  if(!session)return;
+  const key=sessionKey(session.workspace, session.id);
+  const favorite=Boolean(nextMark.favorite);
+  const tags=normalizeTagList(Array.isArray(nextMark.tags)?nextMark.tags.join(','):nextMark.tags||'');
+  if(!favorite && !tags.length){
+    delete sessionMarks[key];
+  }else{
+    sessionMarks[key]={favorite,tags};
+  }
+  saveSessionMarks();
 }
 
 function getPathAlias(path){
@@ -331,10 +704,10 @@ function buildCardPreviewLines(session){
   return lines.slice(0,2);
 }
 
-function buildCardPreviewHtml(session){
+function buildCardPreviewHtml(session, query=''){
   const lines=buildCardPreviewLines(session);
   if(!lines.length)return '';
-  return `<div class="card-preview">${lines.map(line=>`<div class="card-preview-line"><span class="card-preview-label">${esc(line.label)}</span><span class="card-preview-text">${esc(line.text)}</span></div>`).join('')}</div>`;
+  return `<div class="card-preview">${lines.map(line=>`<div class="card-preview-line"><span class="card-preview-label">${esc(line.label)}</span><span class="card-preview-text">${renderHighlightedText(line.text, query)}</span></div>`).join('')}</div>`;
 }
 
 function shouldClampMessage(text){
@@ -494,13 +867,120 @@ function displayRepoUrl(url){
   return (url||DEFAULT_REPO_URL).replace(/^https?:\/\//,'');
 }
 
+function syncHeaderRepoLink(){
+  const link=document.getElementById('repoHeaderLink');
+  if(!link)return;
+  const repoUrl=appMeta.repoUrl||DEFAULT_REPO_URL;
+  const label=t('repoLabel');
+  link.href=repoUrl;
+  link.title=label;
+  link.setAttribute('aria-label', label);
+}
+
+function syncScrollTopButtonLabel(){
+  const btn=document.getElementById('scrollTopBtn');
+  if(!btn)return;
+  const label=t('scrollToTop');
+  btn.title=label;
+  btn.setAttribute('aria-label', label);
+}
+
+function syncShortcutButtonLabel(){
+  const btn=document.getElementById('shortcutHelpBtn');
+  if(!btn)return;
+  const label=t('shortcutOpen');
+  btn.title=label;
+  btn.setAttribute('aria-label', label);
+}
+
+function updateScrollTopButton(){
+  const btn=document.getElementById('scrollTopBtn');
+  if(!btn)return;
+  btn.classList.toggle('show', window.scrollY > 300);
+}
+
+function scrollToTop(){
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function showToast(message, type='info', duration=2400){
+  const region=document.getElementById('toastRegion');
+  if(!region || !message)return;
+  const id=`toast-${++toastCounter}`;
+  const node=document.createElement('div');
+  node.className=`toast toast-${type}`;
+  node.id=id;
+  node.textContent=message;
+  region.appendChild(node);
+  requestAnimationFrame(()=>node.classList.add('show'));
+  const close=()=>{
+    if(!node.parentNode)return;
+    toastTimers.delete(id);
+    node.classList.remove('show');
+    setTimeout(()=>node.remove(), 220);
+  };
+  const timer=setTimeout(close, duration);
+  toastTimers.set(id, timer);
+  node.addEventListener('click', ()=>{
+    clearTimeout(toastTimers.get(id));
+    toastTimers.delete(id);
+    close();
+  });
+}
+
+function isEditableTarget(target){
+  if(!target)return false;
+  const tag=(target.tagName||'').toLowerCase();
+  return tag==='input' || tag==='textarea' || tag==='select' || target.isContentEditable;
+}
+
+function focusSearchInput(){
+  const input=document.getElementById('searchInput');
+  if(!input)return;
+  input.focus();
+  input.select();
+}
+
+function renderShortcutHelp(){
+  const rows=[
+    ['?', t('shortcutOpen')],
+    ['/', t('searchFocus')],
+    ['Ctrl/Cmd + K', t('searchFocus')],
+    ['G', t('shortcutViewGrid')],
+    ['L', t('shortcutViewList')],
+    ['T', t('shortcutTheme')],
+    ['F', t('shortcutFavorites')],
+    ['S', t('shortcutSelection')],
+    ['O', t('shortcutOrganize')],
+    ['D', t('shortcutGroups')],
+    ['A', t('shortcutSelectAll')],
+    ['Esc', t('cancel')],
+  ];
+  return `<div class="shortcut-help">
+    <div class="shortcut-help-intro">${esc(t('shortcutHelp'))}</div>
+    <div class="shortcut-list">${rows.map(([key,label])=>`<div class="shortcut-item"><kbd>${esc(key)}</kbd><span>${esc(label)}</span></div>`).join('')}</div>
+  </div>`;
+}
+
+function showShortcutHelp(){
+  if(document.getElementById('confirmOverlay').classList.contains('show'))return;
+  if(document.getElementById('modalOverlay').classList.contains('show') && currentDetailData)return;
+  document.getElementById('modalTitle').textContent=t('shortcutHelp');
+  document.getElementById('modalBody').innerHTML=renderShortcutHelp();
+  document.getElementById('modalOverlay').classList.add('show');
+}
+
 function renderAppMeta(){
   const el=document.getElementById('appMetaBar');
   if(!el)return;
   const currentVersion=appMeta.currentVersion||'—';
   const latestVersion=appMeta.latestVersion||'';
-  const repoUrl=appMeta.repoUrl||DEFAULT_REPO_URL;
-  const releaseUrl=appMeta.releaseUrl||`${repoUrl}/releases/latest`;
+  const releaseUrl=appMeta.releaseUrl||`${(appMeta.repoUrl||DEFAULT_REPO_URL)}/releases/latest`;
+  const sessionsDir=appMeta.sessionsDir||'—';
+  const serverPort=appMeta.serverPort||'—';
+  const latestVersionHtml=appMeta.updateAvailable&&latestVersion
+    ? `<span class="app-meta-pill">${esc(t('versionLatest',{version:latestVersion}))}</span>`
+    : '';
   let statusHtml='';
   if(appMeta.loaded){
     if(appMeta.updateAvailable&&latestVersion){
@@ -511,14 +991,16 @@ function renderAppMeta(){
       statusHtml=`<span class="app-meta-pill app-meta-pill-warn">${esc(t('updateCheckFailed'))}</span>`;
     }
   }
+  syncHeaderRepoLink();
   el.innerHTML=`<div class="app-meta-content">
     <div class="app-meta-group">
       <span class="app-meta-pill">${esc(t('versionCurrent',{version:currentVersion}))}</span>
-      ${latestVersion?`<span class="app-meta-pill">${esc(t('versionLatest',{version:latestVersion}))}</span>`:''}
+      ${latestVersionHtml}
       ${statusHtml}
+      <span class="app-meta-pill">${esc(t('serverPort',{port:serverPort}))}</span>
+      <span class="app-meta-pill app-meta-path" title="${esc(sessionsDir)}">${esc(t('sessionsDir',{path:sessionsDir}))}</span>
     </div>
     <div class="app-meta-group app-meta-links">
-      <a class="app-meta-link" href="${repoUrl}" target="_blank" rel="noreferrer">${esc(t('repoLabel'))}: ${esc(displayRepoUrl(repoUrl))}</a>
       <a class="app-meta-link" href="${releaseUrl}" target="_blank" rel="noreferrer">${esc(t('releaseLink'))}</a>
     </div>
   </div>`;
@@ -533,6 +1015,345 @@ async function loadAppMeta(){
     appMeta={...appMeta,loaded:true,ok:false,error:'request-failed'};
   }
   renderAppMeta();
+}
+
+function updateFavoritesOnlyButton(){
+  const btn=document.getElementById('favoritesOnlyBtn');
+  if(!btn)return;
+  btn.classList.toggle('active', favoritesOnly);
+}
+
+function toggleSelectionMode(){
+  selectionMode=!selectionMode;
+  if(selectionMode){
+    organizeMode=false;
+  }else{
+    selectedSessionKeys.clear();
+  }
+  renderSessionActionBar();
+  renderSessions();
+}
+
+function toggleOrganizeMode(){
+  organizeMode=!organizeMode;
+  if(organizeMode){
+    selectionMode=false;
+    activeSort='custom';
+    syncSortOptions();
+  }
+  renderSessionActionBar();
+  renderSessions();
+}
+
+function toggleGroupedView(){
+  customGroupedView=!customGroupedView;
+  localStorage.setItem(CUSTOM_GROUPED_STORAGE_KEY, customGroupedView?'1':'0');
+  if(customGroupedView){
+    activeSort='custom';
+    syncSortOptions();
+  }
+  renderSessionActionBar();
+  renderSessions();
+}
+
+function clearSelection(){
+  selectedSessionKeys.clear();
+  renderSessionActionBar();
+  renderSessions();
+}
+
+function selectAllFiltered(){
+  const list=getFiltered();
+  list.forEach(session=>selectedSessionKeys.add(sessionKey(session.workspace, session.id)));
+  renderSessionActionBar();
+  renderSessions();
+}
+
+function toggleSessionSelected(workspace,id){
+  const key=sessionKey(workspace,id);
+  if(selectedSessionKeys.has(key)){
+    selectedSessionKeys.delete(key);
+  }else{
+    selectedSessionKeys.add(key);
+  }
+  renderSessionActionBar();
+  renderSessions();
+}
+
+function bulkSetFavorite(value){
+  const list=getSelectedSessions();
+  if(!list.length){
+    showToast(t('bulkDeleteNone'),'warning');
+    return;
+  }
+  list.forEach(session=>{
+    const mark=getSessionMark(session);
+    updateSessionMark(session,{favorite:value,tags:mark.tags});
+  });
+  renderAll();
+  if(currentDetailData)renderCurrentSessionDetail();
+  showToast(t(value?'bulkFavoriteDone':'bulkUnfavoriteDone',{count:list.length}),'success');
+}
+
+function showConfirm(title, text, onConfirm){
+  document.querySelector('#confirmOverlay .confirm-box h3').textContent=title;
+  document.getElementById('confirmText').textContent=text;
+  document.getElementById('confirmOverlay').classList.add('show');
+  document.getElementById('confirmDeleteBtn').onclick=async()=>{
+    await onConfirm();
+  };
+}
+
+async function bulkDeleteSelected(){
+  const list=getSelectedSessions();
+  if(!list.length){
+    showToast(t('bulkDeleteNone'),'warning');
+    return;
+  }
+  showConfirm(
+    t('bulkDeleteTitle'),
+    t('bulkDeleteConfirm',{count:list.length}),
+    async()=>{
+      await Promise.all(list.map(session=>fetch(`/api/delete?workspace=${session.workspace}&id=${session.id}`,{method:'DELETE'})));
+      hideConfirm();
+      selectedSessionKeys.clear();
+      showToast(t('bulkDeleteDone',{count:list.length}),'success');
+      await loadSessions();
+    }
+  );
+}
+
+function renderSessionActionBar(){
+  const bar=document.getElementById('sessionActionBar');
+  if(!bar)return;
+  const count=selectedSessionKeys.size;
+  const baseButtons=`
+    <button class="btn-toolbar-action ${selectionMode?'active':''}" onclick="toggleSelectionMode()">${esc(t('selectionMode'))}</button>
+    <button class="btn-toolbar-action ${organizeMode?'active':''}" onclick="toggleOrganizeMode()">${esc(t('organizeMode'))}</button>
+    <button class="btn-toolbar-action ${customGroupedView?'active':''}" onclick="toggleGroupedView()">${esc(t('groupedView'))}</button>`;
+  let extra='';
+  if(selectionMode){
+    extra=`
+      <span class="toolbar-pill">${esc(t('selectionCount',{count}))}</span>
+      <button class="btn-toolbar-action" onclick="selectAllFiltered()">${esc(t('selectAll'))}</button>
+      <button class="btn-toolbar-action" onclick="clearSelection()">${esc(t('clearSelection'))}</button>
+      <button class="btn-toolbar-action" onclick="exportSelectedSessions('json')">${esc(t('bulkExportJson'))}</button>
+      <button class="btn-toolbar-action" onclick="exportSelectedSessions('md')">${esc(t('bulkExportMarkdown'))}</button>
+      <button class="btn-toolbar-action" onclick="bulkSetFavorite(true)">${esc(t('bulkFavorite'))}</button>
+      <button class="btn-toolbar-action" onclick="bulkSetFavorite(false)">${esc(t('bulkUnfavorite'))}</button>
+      <button class="btn-toolbar-action btn-toolbar-danger" onclick="bulkDeleteSelected()">${esc(t('bulkDelete'))}</button>`;
+  }else if(organizeMode || customGroupedView){
+    extra=`
+      <span class="toolbar-pill">${esc(t('sortCustom'))}</span>
+      <button class="btn-toolbar-action" onclick="createCustomGroup()">${esc(t('newGroup'))}</button>
+      <button class="btn-toolbar-action" onclick="resetCustomLayout()">${esc(t('resetLayout'))}</button>`;
+  }
+  bar.innerHTML=`<div class="toolbar-subrow-inner">${baseButtons}${extra}</div>`;
+}
+
+function toggleFavoritesOnly(){
+  favoritesOnly=!favoritesOnly;
+  localStorage.setItem(FAVORITES_ONLY_STORAGE_KEY, favoritesOnly ? '1' : '0');
+  updateFavoritesOnlyButton();
+  renderSessions();
+}
+
+function toggleFavoriteByWorkspaceId(workspace,id){
+  const session=allSessions.find(s=>s.workspace===workspace&&s.id===id) || allSessions.find(s=>s.id===id);
+  if(!session)return;
+  const mark=getSessionMark(session);
+  updateSessionMark(session,{favorite:!mark.favorite,tags:mark.tags});
+  renderAll();
+  if(currentDetailData && currentDetailData.sess && currentDetailData.sess.id===session.id && currentDetailData.sess.workspace===session.workspace){
+    renderCurrentSessionDetail();
+  }
+}
+
+function toggleFavoriteForCurrentSession(){
+  const session=getCurrentSessionEntry();
+  if(!session)return;
+  toggleFavoriteByWorkspaceId(session.workspace, session.id);
+}
+
+function editTagsForCurrentSession(){
+  const session=getCurrentSessionEntry();
+  if(!session)return;
+  const currentTags=getSessionTags(session).join(', ');
+  const value=prompt(t('tagsPrompt'), currentTags);
+  if(value===null)return;
+  const mark=getSessionMark(session);
+  updateSessionMark(session,{favorite:mark.favorite,tags:value});
+  renderAll();
+  renderCurrentSessionDetail();
+  showToast(t('tagsSaved'),'success');
+}
+
+function renderTagBadges(tags, query=''){
+  if(!tags.length)return '';
+  return `<div class="session-tags">${tags.map(tag=>`<span class="session-tag">${renderHighlightedText(tag, query)}</span>`).join('')}</div>`;
+}
+
+function sanitizeFileName(value){
+  return String(value||'export').replace(/[<>:"/\\|?*\u0000-\u001f]+/g,'-').replace(/\s+/g,'-').slice(0,80) || 'export';
+}
+
+function nowStamp(){
+  const d=new Date();
+  const pad=n=>String(n).padStart(2,'0');
+  return `${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}-${pad(d.getHours())}${pad(d.getMinutes())}${pad(d.getSeconds())}`;
+}
+
+function saveDownload(filename, content, mimeType){
+  const blob=new Blob([content], {type:mimeType});
+  const url=URL.createObjectURL(blob);
+  const link=document.createElement('a');
+  link.href=url;
+  link.download=filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(()=>URL.revokeObjectURL(url), 1000);
+}
+
+function sessionExportSummary(session){
+  const mark=getSessionMark(session);
+  return {
+    ...session,
+    favorite:mark.favorite,
+    tags:mark.tags,
+    totalTokens:getTotalTokens(session),
+  };
+}
+
+function buildFilteredSessionsMarkdown(list){
+  const lines=[
+    `# ${t('tabSessions')}`,
+    '',
+    `- Exported: ${new Date().toISOString()}`,
+    `- Count: ${list.length}`,
+    `- Query: ${document.getElementById('searchInput').value.trim() || '-'}`,
+    '',
+  ];
+  list.forEach((session,index)=>{
+    const summary=sessionExportSummary(session);
+    lines.push(`## ${index+1}. ${summary.title}`);
+    lines.push(`- ID: ${summary.id}`);
+    lines.push(`- Workspace: ${summary.workspace}`);
+    lines.push(`- Model: ${summary.model}`);
+    lines.push(`- Messages: ${summary.messageCount}`);
+    lines.push(`- Tokens: ${summary.totalTokens}`);
+    lines.push(`- Favorite: ${summary.favorite ? 'yes' : 'no'}`);
+    lines.push(`- Tags: ${summary.tags.join(', ') || '-'}`);
+    lines.push(`- Path: ${getSessionPathValue(summary) || '-'}`);
+    lines.push(`- Updated: ${summary.lastModified}`);
+    if(summary.firstUserMessage)lines.push(`- First prompt: ${summary.firstUserMessage}`);
+    if(summary.latestMessagePreview)lines.push(`- Latest preview: ${summary.latestMessagePreview}`);
+    lines.push('');
+  });
+  return lines.join('\n');
+}
+
+function exportSessionList(format, list, filenameBase){
+  if(!list.length){
+    showToast(t('noSessionsToExport'),'warning');
+    return;
+  }
+  if(format==='json'){
+    saveDownload(
+      `${filenameBase}.json`,
+      JSON.stringify({
+        exportedAt:new Date().toISOString(),
+        appVersion:appMeta.currentVersion||'',
+        filters:{
+          workspace:activeWorkspace,
+          sort:activeSort,
+          query:document.getElementById('searchInput').value.trim(),
+          favoritesOnly,
+        },
+        sessions:list.map(sessionExportSummary),
+      }, null, 2),
+      'application/json;charset=utf-8'
+    );
+    return;
+  }
+  saveDownload(`${filenameBase}.md`, buildFilteredSessionsMarkdown(list), 'text/markdown;charset=utf-8');
+}
+
+function exportFilteredSessions(format){
+  const list=getFiltered();
+  exportSessionList(format, list, `fsm-sessions-${nowStamp()}`);
+}
+
+function buildSessionMarkdownExport(session, msgs){
+  const summary=sessionExportSummary(session);
+  const lines=[
+    `# ${summary.title}`,
+    '',
+    `- ID: ${summary.id}`,
+    `- Workspace: ${summary.workspace}`,
+    `- Model: ${summary.model}`,
+    `- Messages: ${summary.messageCount}`,
+    `- Tokens: ${summary.totalTokens}`,
+    `- Favorite: ${summary.favorite ? 'yes' : 'no'}`,
+    `- Tags: ${summary.tags.join(', ') || '-'}`,
+    `- Path: ${getSessionPathValue(summary) || '-'}`,
+    `- Updated: ${summary.lastModified}`,
+    '',
+    '## Messages',
+    '',
+  ];
+  msgs.forEach((msg,index)=>{
+    lines.push(`### ${index+1}. ${displayMessageRole(msg.role)}${msg.timestamp ? ` · ${msg.timestamp}` : ''}`);
+    lines.push('');
+    lines.push('```text');
+    lines.push((msg.text||'').trim() || '(no text)');
+    lines.push('```');
+    const toolDetails=getToolCallDetails(msg);
+    if(toolDetails.length){
+      lines.push('');
+      lines.push(`- Tools: ${toolDetails.map(detail=>detail.name||'tool').join(', ')}`);
+    }
+    lines.push('');
+  });
+  return lines.join('\n');
+}
+
+function exportCurrentSession(format){
+  if(!currentDetailData){
+    showToast(t('noSessionLoaded'),'warning');
+    return;
+  }
+  const {sess,msgs,cliCommand}=currentDetailData;
+  const filenameBase=`${sanitizeFileName(sess.title || sess.id)}-${sanitizeFileName(sess.id)}`;
+  if(format==='json'){
+    saveDownload(
+      `${filenameBase}.json`,
+      JSON.stringify({
+        exportedAt:new Date().toISOString(),
+        appVersion:appMeta.currentVersion||'',
+        session:sessionExportSummary(sess),
+        cliCommand,
+        messages:msgs,
+      }, null, 2),
+      'application/json;charset=utf-8'
+    );
+    return;
+  }
+  saveDownload(`${filenameBase}.md`, buildSessionMarkdownExport(sess, msgs), 'text/markdown;charset=utf-8');
+}
+
+function getSelectedSessions(){
+  const selected=selectedSessionKeys;
+  return allSessions.filter(session=>selected.has(sessionKey(session.workspace, session.id)));
+}
+
+function exportSelectedSessions(format){
+  const list=getSelectedSessions();
+  if(!list.length){
+    showToast(t('bulkDeleteNone'),'warning');
+    return;
+  }
+  exportSessionList(format, list, `fsm-selected-${nowStamp()}`);
 }
 
 function updateRefreshStatus(refreshing=false){
@@ -579,6 +1400,9 @@ async function loadSessions(refreshModal=true) {
   try{
     const res = await fetch('/api/sessions');
     allSessions = await res.json();
+    const validKeys=new Set(allSessions.map(session=>sessionKey(session.workspace, session.id)));
+    selectedSessionKeys=new Set([...selectedSessionKeys].filter(key=>validKeys.has(key)));
+    syncCustomLayoutWithSessions();
     lastRefreshAt = new Date();
     renderAll();
     if(refreshModal)await refreshOpenSessionDetail();
@@ -601,8 +1425,11 @@ function startAutoRefresh(){
 }
 
 function renderAll() {
+  updateFavoritesOnlyButton();
+  renderSessionActionBar();
   renderGlobalStats();
   renderWorkspacePills();
+  setView(viewMode);
   renderSessions();
   analyticsDirty = true;
   if(activeTab === 'analytics')ensureAnalyticsRendered();
@@ -641,7 +1468,11 @@ function renderWorkspacePills() {
 }
 
 function setWorkspace(w){activeWorkspace=w;renderWorkspacePills();filterSessions();}
-function setSort(v){activeSort=v;filterSessions();}
+function setSort(v){
+  activeSort=v;
+  syncSortOptions();
+  filterSessions();
+}
 
 function getTotalTokens(s){
   const u=s.tokenUsage||{};
@@ -733,14 +1564,30 @@ async function runMessageSearch(query,requestId){
   if(requestId===messageSearchRequestId)renderSessions();
 }
 
+function getSearchQuery(){
+  return document.getElementById('searchInput').value.trim();
+}
+
+function sortSessionsByCustomOrder(list){
+  const orderMap=getCustomOrderMap();
+  list.sort((a,b)=>{
+    const aIndex=orderMap.has(sessionKey(a.workspace,a.id)) ? orderMap.get(sessionKey(a.workspace,a.id)) : Number.MAX_SAFE_INTEGER;
+    const bIndex=orderMap.has(sessionKey(b.workspace,b.id)) ? orderMap.get(sessionKey(b.workspace,b.id)) : Number.MAX_SAFE_INTEGER;
+    return aIndex-bIndex || b.lastModifiedTs-a.lastModifiedTs;
+  });
+}
+
 function getFiltered(){
-  const q=document.getElementById('searchInput').value.trim().toLowerCase();
+  const q=getSearchQuery().toLowerCase();
   const labels=getWorkspaceLabels();
   let list=allSessions.filter(s=>{
     if(activeWorkspace!=='all'&&s.workspace!==activeWorkspace)return false;
+    if(favoritesOnly && !isFavoriteSession(s))return false;
     if(q){
       const path=getSessionPathValue(s);
-      const h=`${s.title} ${s.model} ${s.cwd} ${path} ${displayPath(path)} ${s.workspace} ${workspaceLabel(s.workspace, labels)} ${s.firstUserMessage||''} ${s.latestMessagePreview||''}`.toLowerCase();
+      const tags=getSessionTags(s).join(' ');
+      const favoriteText=isFavoriteSession(s)?t('favoriteBadge'):'';
+      const h=`${s.title} ${s.model} ${s.cwd} ${path} ${displayPath(path)} ${s.workspace} ${workspaceLabel(s.workspace, labels)} ${s.firstUserMessage||''} ${s.latestMessagePreview||''} ${tags} ${favoriteText}`.toLowerCase();
       if(!h.includes(q)){
         const hasMessageMatch=activeMessageSearchQuery===q&&messageSearchSessionKeys&&messageSearchSessionKeys.has(sessionKey(s.workspace,s.id));
         if(!hasMessageMatch)return false;
@@ -753,54 +1600,228 @@ function getFiltered(){
     case 'messages': list.sort((a,b)=>b.messageCount-a.messageCount); break;
     case 'size': list.sort((a,b)=>b.fileSize-a.fileSize); break;
     case 'workspace': list.sort((a,b)=>a.workspace.localeCompare(b.workspace)||b.lastModifiedTs-a.lastModifiedTs); break;
+    case 'custom': sortSessionsByCustomOrder(list); break;
     default: list.sort((a,b)=>b.lastModifiedTs-a.lastModifiedTs);
   }
   return list;
 }
 function filterSessions(){renderSessions();}
 
-function renderSessions(){
-  const fl=getFiltered();
-  if(!fl.length){
-    document.getElementById('sessionGrid').innerHTML=`<div class="empty-state"><h2>${t('noSessions')}</h2><p>${t('noSessionsSub')}</p></div>`;
-    return;
-  }
-  document.getElementById('sessionGrid').innerHTML=fl.map(s=>{
-    const tu=s.tokenUsage||{};
-    const path=getSessionPathValue(s);
-    const tot=(tu.inputTokens||0)+(tu.outputTokens||0)+(tu.cacheCreationTokens||0)+(tu.cacheReadTokens||0)+(tu.thinkingTokens||0);
-    const pI=tot?((tu.inputTokens||0)/tot*100):0;
-    const pO=tot?((tu.outputTokens||0)/tot*100):0;
-    const pC=tot?(((tu.cacheCreationTokens||0)+(tu.cacheReadTokens||0))/tot*100):0;
-    const pT=tot?((tu.thinkingTokens||0)/tot*100):0;
-    const at=s.assistantActiveTimeMs?fmtDur(s.assistantActiveTimeMs):'-';
-    const d=new Date(s.lastModified);
-    const ds=lang==='zh'
-      ? d.toLocaleDateString('zh-CN')+' '+d.toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'})
-      : d.toLocaleDateString('en-US',{month:'short',day:'numeric'})+' '+d.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
-    return `<div class="card" onclick="openSession('${s.workspace}','${s.id}')">
-      <div class="card-actions"><button class="btn-icon" title="Delete" onclick="event.stopPropagation();confirmDelete('${s.workspace}','${s.id}',\`${esc(s.title)}\`)">&#x2715;</button></div>
-      <div class="card-title">${esc(s.title)}</div>
-      <div class="card-meta">
-        <span class="badge badge-model">${esc(s.model)}</span>
-        ${s.reasoningEffort?`<span class="badge badge-effort">${s.reasoningEffort}</span>`:''}
-        <span class="badge badge-msg">${s.messageCount} ${t('msgs')}</span>
-      </div>
-      <div class="card-info"><span>${ds}</span><span>${fmtSz(s.fileSize)}</span><span>${at}</span><span>${fmtTk(tot)} ${t('tokens')}</span></div>
-      <div class="card-path" title="${esc(displayPathTitle(path))}">${esc(displayPath(path))}</div>
-      ${buildCardPreviewHtml(s)}
-      <div class="card-tokens"><div class="token-bar">
-        <div class="tk-in" style="width:${pI}%"></div><div class="tk-out" style="width:${pO}%"></div>
-        <div class="tk-cache" style="width:${pC}%"></div><div class="tk-think" style="width:${pT}%"></div>
-      </div></div>
+function shouldVirtualize(list){
+  return list.length > VIRTUALIZATION_THRESHOLD && !selectionMode && !organizeMode && !customGroupedView;
+}
+
+function buildSessionCardHtml(session, options={}){
+  const query=options.query || '';
+  const styleAttr=options.style ? ` style="${options.style}"` : '';
+  const tu=session.tokenUsage||{};
+  const path=getSessionPathValue(session);
+  const mark=getSessionMark(session);
+  const key=sessionKey(session.workspace, session.id);
+  const selected=selectedSessionKeys.has(key);
+  const groupId=getSessionGroupIdByKey(key);
+  const tot=getTotalTokens(session);
+  const pI=tot?((tu.inputTokens||0)/tot*100):0;
+  const pO=tot?((tu.outputTokens||0)/tot*100):0;
+  const pC=tot?(((tu.cacheCreationTokens||0)+(tu.cacheReadTokens||0))/tot*100):0;
+  const pT=tot?((tu.thinkingTokens||0)/tot*100):0;
+  const at=session.assistantActiveTimeMs?fmtDur(session.assistantActiveTimeMs):'-';
+  const d=new Date(session.lastModified);
+  const ds=lang==='zh'
+    ? d.toLocaleDateString('zh-CN')+' '+d.toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'})
+    : d.toLocaleDateString('en-US',{month:'short',day:'numeric'})+' '+d.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
+  const classes=['card'];
+  if(mark.favorite)classes.push('card-favorite');
+  if(selected)classes.push('card-selected');
+  if(organizeMode)classes.push('card-draggable');
+  const clickAction=selectionMode ? `toggleSessionSelected('${session.workspace}','${session.id}')` : `openSession('${session.workspace}','${session.id}')`;
+  const dragAttrs=organizeMode
+    ? ` draggable="true" ondragstart="handleCardDragStart(event,'${key}')" ondragend="handleCardDragEnd()" ondragover="handleCardDragOver(event)" ondragleave="handleCardDragLeave(event)" ondrop="handleCardDropOnCard(event,'${key}')"`
+    : '';
+  const controls = selectionMode || organizeMode
+    ? `<div class="card-controls">
+      ${selectionMode?`<button class="session-select-toggle ${selected?'is-selected':''}" title="${esc(t('selectionMode'))}" onclick="event.stopPropagation();toggleSessionSelected('${session.workspace}','${session.id}')">${selected?'✓':''}</button>`:''}
+      ${organizeMode?`<span class="session-drag-handle" title="${esc(t('organizeMode'))}">⋮⋮</span>`:''}
+    </div>`
+    : '';
+  const actions = selectionMode || organizeMode ? '' : `<div class="card-actions">
+      <button class="btn-icon ${mark.favorite?'is-active':''}" title="${esc(t(mark.favorite?'unfavorite':'favorite'))}" onclick="event.stopPropagation();toggleFavoriteByWorkspaceId('${session.workspace}','${session.id}')">${mark.favorite?'★':'☆'}</button>
+      <button class="btn-icon" title="${esc(t('delete'))}" onclick="event.stopPropagation();confirmDelete('${session.workspace}','${session.id}',\`${esc(session.title)}\`)">&#x2715;</button>
     </div>`;
+  return `<div class="${classes.join(' ')}" data-session-key="${key}" data-group-id="${groupId}" onclick="${clickAction}"${dragAttrs}${styleAttr}>
+    ${controls}
+    ${actions}
+    <div class="card-title-row">
+      <div class="card-title">${renderHighlightedText(session.title, query)}</div>
+      ${mark.favorite?`<span class="favorite-indicator">${esc(t('favoriteBadge'))}</span>`:''}
+    </div>
+    <div class="card-meta">
+      <span class="badge badge-model">${esc(session.model)}</span>
+      ${session.reasoningEffort?`<span class="badge badge-effort">${session.reasoningEffort}</span>`:''}
+      <span class="badge badge-msg">${session.messageCount} ${t('msgs')}</span>
+    </div>
+    ${renderTagBadges(mark.tags, query)}
+    <div class="card-info"><span>${ds}</span><span>${fmtSz(session.fileSize)}</span><span>${at}</span><span>${fmtTk(tot)} ${t('tokens')}</span></div>
+    <div class="card-path" title="${esc(displayPathTitle(path))}">${renderHighlightedText(displayPath(path), query)}</div>
+    ${buildCardPreviewHtml(session, query)}
+    <div class="card-tokens"><div class="token-bar">
+      <div class="tk-in" style="width:${pI}%"></div><div class="tk-out" style="width:${pO}%"></div>
+      <div class="tk-cache" style="width:${pC}%"></div><div class="tk-think" style="width:${pT}%"></div>
+    </div></div>
+  </div>`;
+}
+
+function renderGroupedSessions(list){
+  const grid=document.getElementById('sessionGrid');
+  const query=getSearchQuery();
+  const groups=getCustomGroupEntries().map(group=>({
+    ...group,
+    items:list.filter(session=>getSessionGroupIdByKey(sessionKey(session.workspace, session.id))===group.id),
+  })).filter(group=>group.items.length || group.id==='ungrouped');
+  grid.className='group-board';
+  grid.style.height='';
+  grid.innerHTML=groups.map(group=>`<section class="group-section" data-group-id="${group.id}" ondragover="handleCardDragOver(event)" ondragleave="handleCardDragLeave(event)" ondrop="handleCardDropOnGroup(event,'${group.id}')">
+    <div class="group-head"><span>${esc(group.label)}</span><span class="group-count">${group.items.length}</span></div>
+    <div class="group-cards">${group.items.map(session=>buildSessionCardHtml(session,{query})).join('')}</div>
+  </section>`).join('');
+  virtualState.active=false;
+  virtualState.list=[];
+  virtualState.signature='';
+}
+
+function renderVirtualSessions(force=false){
+  if(!virtualState.active)return;
+  const grid=document.getElementById('sessionGrid');
+  const list=virtualState.list;
+  const query=getSearchQuery();
+  const width=grid.clientWidth || grid.parentElement?.clientWidth || 0;
+  if(!width)return;
+  const columns=viewMode==='list' ? 1 : Math.max(1, Math.floor((width + GRID_CARD_GAP) / (GRID_CARD_MIN_WIDTH + GRID_CARD_GAP)));
+  const cardWidth=viewMode==='list' ? width : Math.max(220, Math.floor((width - (columns - 1) * GRID_CARD_GAP) / columns));
+  const rowHeight=viewMode==='list' ? VIRTUAL_LIST_ROW_HEIGHT : VIRTUAL_GRID_ROW_HEIGHT;
+  const totalRows=Math.ceil(list.length / columns);
+  const totalHeight=totalRows * rowHeight;
+  const gridTop=grid.getBoundingClientRect().top + window.scrollY;
+  const viewportTop=Math.max(0, window.scrollY - gridTop);
+  const viewportBottom=viewportTop + window.innerHeight;
+  const startRow=Math.max(0, Math.floor(viewportTop / rowHeight) - VIRTUAL_OVERSCAN_ROWS);
+  const endRow=Math.min(totalRows, Math.ceil(viewportBottom / rowHeight) + VIRTUAL_OVERSCAN_ROWS);
+  const startIndex=startRow * columns;
+  const endIndex=Math.min(list.length, endRow * columns);
+  const signature=`${force?'force':''}:${viewMode}:${columns}:${startIndex}:${endIndex}:${width}`;
+  if(!force && virtualState.signature===signature)return;
+  virtualState.signature=signature;
+  grid.className=`grid virtual-session-grid virtual-${viewMode}`;
+  grid.style.height=`${Math.max(totalHeight, rowHeight)}px`;
+  grid.innerHTML=list.slice(startIndex, endIndex).map((session, offset)=>{
+    const index=startIndex + offset;
+    const row=Math.floor(index / columns);
+    const col=index % columns;
+    const style=viewMode==='list'
+      ? `position:absolute;top:${row * rowHeight}px;left:0;width:100%;height:${rowHeight-8}px;`
+      : `position:absolute;top:${row * rowHeight}px;left:${col * (cardWidth + GRID_CARD_GAP)}px;width:${cardWidth}px;height:${rowHeight-GRID_CARD_GAP}px;`;
+    return buildSessionCardHtml(session,{query,style});
   }).join('');
 }
 
+function scheduleVirtualRender(force=false){
+  if(!virtualState.active)return;
+  if(virtualState.frame)cancelAnimationFrame(virtualState.frame);
+  virtualState.frame=requestAnimationFrame(()=>{
+    virtualState.frame=null;
+    renderVirtualSessions(force);
+  });
+}
+
+function handleCardDragStart(event, key){
+  if(!organizeMode)return;
+  dragSessionKey=key;
+  event.dataTransfer.effectAllowed='move';
+  event.dataTransfer.setData('text/plain', key);
+  event.currentTarget.classList.add('card-dragging');
+}
+
+function handleCardDragEnd(){
+  dragSessionKey='';
+  document.querySelectorAll('.drag-over').forEach(node=>node.classList.remove('drag-over'));
+  document.querySelectorAll('.card-dragging').forEach(node=>node.classList.remove('card-dragging'));
+}
+
+function handleCardDragOver(event){
+  if(!organizeMode)return;
+  event.preventDefault();
+  event.currentTarget.classList.add('drag-over');
+}
+
+function handleCardDragLeave(event){
+  event.currentTarget.classList.remove('drag-over');
+}
+
+function handleCardDropOnCard(event, targetKey){
+  if(!organizeMode)return;
+  event.preventDefault();
+  event.stopPropagation();
+  const sourceKey=dragSessionKey || event.dataTransfer.getData('text/plain');
+  if(!sourceKey || sourceKey===targetKey)return;
+  setSessionGroupIdByKey(sourceKey, getSessionGroupIdByKey(targetKey));
+  moveCustomKeyBefore(sourceKey, targetKey);
+  handleCardDragEnd();
+  renderSessions();
+}
+
+function handleCardDropOnGroup(event, groupId){
+  if(!organizeMode)return;
+  event.preventDefault();
+  const sourceKey=dragSessionKey || event.dataTransfer.getData('text/plain');
+  if(!sourceKey)return;
+  setSessionGroupIdByKey(sourceKey, groupId);
+  moveCustomKeyToEnd(sourceKey);
+  handleCardDragEnd();
+  renderSessions();
+}
+
+function renderSessions(){
+  const fl=getFiltered();
+  renderSessionActionBar();
+  if(!fl.length){
+    const grid=document.getElementById('sessionGrid');
+    grid.className='grid';
+    grid.style.height='';
+    grid.innerHTML=`<div class="empty-state"><h2>${t('noSessions')}</h2><p>${t('noSessionsSub')}</p></div>`;
+    virtualState.active=false;
+    virtualState.list=[];
+    virtualState.signature='';
+    return;
+  }
+  if(customGroupedView){
+    renderGroupedSessions(fl);
+    return;
+  }
+  const grid=document.getElementById('sessionGrid');
+  if(shouldVirtualize(fl)){
+    virtualState.active=true;
+    virtualState.list=fl;
+    renderVirtualSessions(true);
+    return;
+  }
+  virtualState.active=false;
+  virtualState.list=[];
+  virtualState.signature='';
+  grid.className='grid';
+  grid.style.height='';
+  const query=getSearchQuery();
+  grid.innerHTML=fl.map(session=>buildSessionCardHtml(session,{query})).join('');
+}
+
 function setView(v,btn){
-  document.querySelectorAll('.view-toggle button').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById('sessionContainer').className=v==='list'?'list-view':'grid-view';
+  viewMode=v;
+  localStorage.setItem(VIEW_MODE_STORAGE_KEY, viewMode);
+  document.querySelectorAll('.view-toggle button').forEach((button,index)=>{
+    button.classList.toggle('active', (index===0&&viewMode==='grid') || (index===1&&viewMode==='list'));
+  });
+  document.getElementById('sessionContainer').className=viewMode==='list'?'list-view':'grid-view';
+  if(btn)btn.classList.add('active');
+  renderSessions();
 }
 
 function switchTab(tab){
@@ -809,6 +1830,7 @@ function switchTab(tab){
   document.getElementById('tab-sessions').style.display=tab==='sessions'?'':'none';
   document.getElementById('tab-analytics').style.display=tab==='analytics'?'':'none';
   if(tab==='analytics')ensureAnalyticsRendered();
+  if(tab==='sessions')scheduleVirtualRender(true);
 }
 
 /* ========== Session detail modal ========== */
@@ -955,6 +1977,7 @@ function updateDetailMessageList(){
 function renderCurrentSessionDetail(){
   if(!currentDetailData)return;
   const {sess,msgs,cliCommand}=currentDetailData;
+  const mark=getSessionMark(sess);
   document.getElementById('modalTitle').textContent=sess.title;
   const tu=sess.tokenUsage||{};
   const path=getSessionPathValue(sess);
@@ -972,8 +1995,13 @@ function renderCurrentSessionDetail(){
     <div class="session-cli-row">
       <button class="btn-cli" onclick="openCli('${sess.workspace}','${sess.id}')">${t('openCli')}</button>
       ${cliCommand?`<button class="btn-cli" data-command="${esc(cliCommand)}" onclick="copyCliCommand(this)">${t('copyCommand')}</button>`:''}
+      <button class="btn-cli btn-secondary" onclick="exportCurrentSession('json')">${t('exportSessionJson')}</button>
+      <button class="btn-cli btn-secondary" onclick="exportCurrentSession('md')">${t('exportSessionMarkdown')}</button>
+      <button class="btn-cli btn-secondary ${mark.favorite?'is-active':''}" onclick="toggleFavoriteForCurrentSession()">${t(mark.favorite?'unfavorite':'favorite')}</button>
+      <button class="btn-cli btn-secondary" onclick="editTagsForCurrentSession()">${t('editTags')}</button>
       ${cliCommand?`<code class="cli-command" title="${esc(cliCommand)}">${esc(cliCommand)}</code>`:''}
     </div>
+    ${renderTagBadges(mark.tags)}
     <div class="session-path-row">
       <div class="session-path-wrap">
         <div class="session-path" title="${esc(displayPathTitle(path))}">${esc(pathDisplay)}</div>
@@ -1027,7 +2055,7 @@ async function renamePathAliasForSession(){
   const sess=getCurrentSessionEntry();
   const path=getSessionPathValue(sess);
   if(!path) {
-    alert(t('pathAliasUnavailable'));
+    showToast(t('pathAliasUnavailable'),'warning');
     return;
   }
   const current=getPathAlias(path) || '';
@@ -1036,20 +2064,20 @@ async function renamePathAliasForSession(){
   setPathAlias(path, value);
   renderAll();
   await refreshOpenSessionDetail();
-  alert(t(getPathAlias(path) ? 'pathAliasSaved' : 'pathAliasCleared'));
+  showToast(t(getPathAlias(path) ? 'pathAliasSaved' : 'pathAliasCleared'),'success');
 }
 
 async function clearPathAliasForSession(){
   const sess=getCurrentSessionEntry();
   const path=getSessionPathValue(sess);
   if(!path) {
-    alert(t('pathAliasUnavailable'));
+    showToast(t('pathAliasUnavailable'),'warning');
     return;
   }
   setPathAlias(path, '');
   renderAll();
   await refreshOpenSessionDetail();
-  alert(t('pathAliasCleared'));
+  showToast(t('pathAliasCleared'),'success');
 }
 
 function closeModal(e){if(e.target===document.getElementById('modalOverlay'))hideModal();}
@@ -1083,10 +2111,10 @@ async function copyText(text){
 
 async function copyCliCommand(btn){
   const command=btn.dataset.command||'';
-  if(!command){alert(t('copyCommandFailed'));return;}
+  if(!command){showToast(t('copyCommandFailed'),'error');return;}
   const original=btn.textContent;
   const ok=await copyText(command);
-  if(!ok){alert(t('copyCommandFailed'));return;}
+  if(!ok){showToast(t('copyCommandFailed'),'error');return;}
   btn.textContent=t('copied');
   setTimeout(()=>{btn.textContent=original;},1200);
 }
@@ -1098,39 +2126,131 @@ async function openCli(ws,sid){
     body:JSON.stringify({workspace:ws,id:sid})
   });
   const data=await res.json();
-  if(!data.ok){alert(t('openCliFailed',{error:data.error||'unknown error'}));return;}
-  alert(t('openCliStarted'));
+  if(!data.ok){showToast(t('openCliFailed',{error:data.error||'unknown error'}),'error');return;}
+  showToast(t('openCliStarted'),'success');
 }
 
 function confirmDelete(ws,sid,title){
-  document.getElementById('confirmText').textContent=t('deleteConfirm',{title});
-  document.getElementById('confirmOverlay').classList.add('show');
-  document.getElementById('confirmDeleteBtn').onclick=async()=>{
-    await fetch(`/api/delete?workspace=${ws}&id=${sid}`,{method:'DELETE'});
-    hideConfirm();await loadSessions();
-  };
+  showConfirm(
+    t('deleteTitle'),
+    t('deleteConfirm',{title}),
+    async()=>{
+      await fetch(`/api/delete?workspace=${ws}&id=${sid}`,{method:'DELETE'});
+      hideConfirm();
+      await loadSessions();
+    }
+  );
 }
 function hideConfirm(){document.getElementById('confirmOverlay').classList.remove('show');}
 
 async function clearEmptySessions(){
   const empties=allSessions.filter(s=>s.messageCount===0);
-  if(!empties.length){alert(t('clearEmptyNone'));return;}
-  document.getElementById('confirmText').textContent=t('clearEmptyConfirm',{count:empties.length});
-  document.querySelector('#confirmOverlay .confirm-box h3').textContent=t('clearEmptyTitle');
-  document.getElementById('confirmOverlay').classList.add('show');
-  document.getElementById('confirmDeleteBtn').onclick=async()=>{
-    const res=await fetch('/api/delete_empty',{method:'DELETE'});
-    const data=await res.json();
-    hideConfirm();
-    alert(t('clearEmptyDone',{count:data.removed}));
-    await loadSessions();
-  };
+  if(!empties.length){showToast(t('clearEmptyNone'),'info');return;}
+  showConfirm(
+    t('clearEmptyTitle'),
+    t('clearEmptyConfirm',{count:empties.length}),
+    async()=>{
+      const res=await fetch('/api/delete_empty',{method:'DELETE'});
+      const data=await res.json();
+      hideConfirm();
+      showToast(t('clearEmptyDone',{count:data.removed}),'success');
+      await loadSessions();
+    }
+  );
 }
 
 /* ========== Analytics ========== */
+function startOfWeek(ts){
+  const d=new Date(ts);
+  d.setHours(0,0,0,0);
+  const day=(d.getDay()+6)%7;
+  d.setDate(d.getDate()-day);
+  return d;
+}
+
+function getTrendEntries(granularity){
+  const map={};
+  allSessions.forEach(session=>{
+    const sourceTs=session.lastModifiedTs || Date.parse(session.lastModified || 0);
+    if(!sourceTs)return;
+    const bucketDate=granularity==='week' ? startOfWeek(sourceTs) : new Date(sourceTs);
+    bucketDate.setHours(0,0,0,0);
+    const key=bucketDate.toISOString().slice(0,10);
+    if(!map[key])map[key]={key,ts:bucketDate.getTime(),messages:0,sessions:0};
+    map[key].messages+=session.messageCount||0;
+    map[key].sessions+=1;
+  });
+  return Object.values(map).sort((a,b)=>a.ts-b.ts);
+}
+
+function formatTrendLabel(entry, granularity){
+  const d=new Date(entry.ts);
+  if(granularity==='week'){
+    return lang==='zh'
+      ? `${d.getMonth()+1}/${d.getDate()} 周`
+      : `Wk ${d.toLocaleDateString('en-US',{month:'short',day:'numeric'})}`;
+  }
+  return lang==='zh'
+    ? `${d.getMonth()+1}/${d.getDate()}`
+    : d.toLocaleDateString('en-US',{month:'short',day:'numeric'});
+}
+
+function setAnalyticsTrendGranularity(value){
+  analyticsTrendGranularity=value;
+  renderAnalytics();
+}
+
+function buildTrendChart(entries){
+  if(!entries.length){
+    return `<div class="detail-empty">${esc(t('noSessionsSub'))}</div>`;
+  }
+  const width=720;
+  const height=240;
+  const padding={top:18,right:18,bottom:44,left:42};
+  const innerWidth=width-padding.left-padding.right;
+  const innerHeight=height-padding.top-padding.bottom;
+  const maxValue=Math.max(...entries.map(entry=>entry.messages),1);
+  const points=entries.map((entry,index)=>{
+    const x=padding.left + (entries.length===1 ? innerWidth/2 : (index/(entries.length-1))*innerWidth);
+    const y=padding.top + innerHeight - ((entry.messages/maxValue) * innerHeight);
+    return {...entry,x,y};
+  });
+  const linePath=points.map((point,index)=>`${index===0?'M':'L'}${point.x.toFixed(2)} ${point.y.toFixed(2)}`).join(' ');
+  const areaPath=`${linePath} L ${points[points.length-1].x.toFixed(2)} ${(padding.top+innerHeight).toFixed(2)} L ${points[0].x.toFixed(2)} ${(padding.top+innerHeight).toFixed(2)} Z`;
+  const grid=[0,.25,.5,.75,1].map(f=>{
+    const y=padding.top + innerHeight - (innerHeight*f);
+    return `<line x1="${padding.left}" y1="${y}" x2="${padding.left+innerWidth}" y2="${y}" class="trend-grid-line"></line>
+      <text x="${padding.left-8}" y="${y+4}" text-anchor="end" class="trend-axis-label">${Math.round(maxValue*f)}</text>`;
+  }).join('');
+  const labels=points.filter((_,index)=>entries.length<=6 || index===0 || index===entries.length-1 || index%Math.ceil(entries.length/6)===0)
+    .map(point=>`<text x="${point.x}" y="${height-12}" text-anchor="middle" class="trend-axis-label">${esc(formatTrendLabel(point, analyticsTrendGranularity))}</text>`).join('');
+  const totalMessages=entries.reduce((sum,entry)=>sum+entry.messages,0);
+  const totalSessions=entries.reduce((sum,entry)=>sum+entry.sessions,0);
+  return `<div class="trend-chart-wrap">
+    <div class="chart-head">
+      <h3>${t('chartMessageTrend')}</h3>
+      <div class="trend-toggle">
+        <button class="${analyticsTrendGranularity==='day'?'active':''}" onclick="setAnalyticsTrendGranularity('day')">${esc(t('trendDay'))}</button>
+        <button class="${analyticsTrendGranularity==='week'?'active':''}" onclick="setAnalyticsTrendGranularity('week')">${esc(t('trendWeek'))}</button>
+      </div>
+    </div>
+    <div class="trend-summary">${esc(t('trendMessages'))}: ${totalMessages} · ${esc(t('trendSessions'))}: ${totalSessions}</div>
+    <svg class="trend-chart" viewBox="0 0 ${width} ${height}" preserveAspectRatio="none">
+      ${grid}
+      <path d="${areaPath}" class="trend-area"></path>
+      <path d="${linePath}" class="trend-line"></path>
+      ${points.map(point=>`<circle cx="${point.x}" cy="${point.y}" r="4" class="trend-point"><title>${esc(formatTrendLabel(point, analyticsTrendGranularity))}: ${point.messages}</title></circle>`).join('')}
+      ${labels}
+    </svg>
+  </div>`;
+}
+
 function renderAnalytics(){
   const area=document.getElementById('chartsArea');
   let h='';
+
+  const trendEntries=getTrendEntries(analyticsTrendGranularity);
+  h+=`<div class="chart-box chart-full">${buildTrendChart(trendEntries)}</div>`;
 
   // 1. Donut - Model distribution
   const mc={};allSessions.forEach(s=>{mc[s.model]=(mc[s.model]||0)+1;});
@@ -1210,7 +2330,7 @@ function renderAnalytics(){
   allSessions.forEach(s=>{const d=s.lastModified.split('T')[0];dc[d]=(dc[d]||0)+1;});
   const de=Object.entries(dc).sort();
   const maxD=Math.max(...de.map(x=>x[1]),1);
-  const accentRGB=theme==='dark'?'88,166,255':'9,105,218';
+  const accentRGB=effectiveTheme==='dark'?'88,166,255':'9,105,218';
   let cells='';
   de.forEach(([d,c])=>{
     const op=0.15+0.85*(c/maxD);
@@ -1322,11 +2442,66 @@ function fmtSz(b){if(b>=1073741824)return(b/1073741824).toFixed(1)+' GB';if(b>=1
 function fmtDur(ms){const s=Math.floor(ms/1000);if(s<60)return s+'s';if(s<3600)return Math.floor(s/60)+'m '+(s%60)+'s';return Math.floor(s/3600)+'h '+Math.floor((s%3600)/60)+'m';}
 function esc(s){const d=document.createElement('div');d.textContent=s||'';return d.innerHTML;}
 
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){hideModal();hideConfirm();}});
+function handleGlobalKeydown(e){
+  if(e.key==='Escape'){
+    hideModal();
+    hideConfirm();
+    return;
+  }
+  if(isEditableTarget(e.target))return;
+  if(document.getElementById('modalOverlay').classList.contains('show') || document.getElementById('confirmOverlay').classList.contains('show'))return;
+  const key=(e.key||'').toLowerCase();
+  if(e.key==='?' || (e.key==='/' && e.shiftKey)){
+    e.preventDefault();
+    showShortcutHelp();
+    return;
+  }
+  if(key==='/' || ((e.metaKey||e.ctrlKey) && key==='k')){
+    e.preventDefault();
+    focusSearchInput();
+    return;
+  }
+  if(key==='g'){e.preventDefault();setView('grid');return;}
+  if(key==='l'){e.preventDefault();setView('list');return;}
+  if(key==='t'){e.preventDefault();toggleTheme();return;}
+  if(key==='f'){e.preventDefault();toggleFavoritesOnly();return;}
+  if(key==='s'){e.preventDefault();toggleSelectionMode();return;}
+  if(key==='o'){e.preventDefault();toggleOrganizeMode();return;}
+  if(key==='d'){e.preventDefault();toggleGroupedView();return;}
+  if(key==='a' && selectionMode){e.preventDefault();selectAllFiltered();}
+}
+
+function handleWindowScroll(){
+  updateScrollTopButton();
+  scheduleVirtualRender();
+}
+
+function handleWindowResize(){
+  scheduleVirtualRender(true);
+}
+
+if(systemThemeMedia){
+  const onSystemThemeChange=()=>{
+    if(theme==='auto')applyTheme();
+  };
+  if(systemThemeMedia.addEventListener){
+    systemThemeMedia.addEventListener('change', onSystemThemeChange);
+  }else if(systemThemeMedia.addListener){
+    systemThemeMedia.addListener(onSystemThemeChange);
+  }
+}
+
+document.addEventListener('keydown', handleGlobalKeydown);
+window.addEventListener('scroll', handleWindowScroll, {passive:true});
+window.addEventListener('resize', handleWindowResize);
 
 applyTheme();
 applyI18n();
 renderAppMeta();
+updateScrollTopButton();
+updateFavoritesOnlyButton();
+renderSessionActionBar();
+setView(viewMode);
 startAutoRefresh();
 loadAppMeta();
 loadSessions();

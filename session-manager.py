@@ -24,6 +24,8 @@ APP_VERSION = 'v0.1.2'
 GITHUB_REPO_URL = 'https://github.com/r0k1n-c/FactoryDroidSession-Manager'
 GITHUB_RELEASES_LATEST_API = 'https://api.github.com/repos/r0k1n-c/FactoryDroidSession-Manager/releases/latest'
 UPDATE_CHECK_CACHE_TTL_SECONDS = 900
+CURRENT_SERVER_HOST = '127.0.0.1'
+CURRENT_SERVER_PORT = PORT
 SCRIPT_PATH = os.path.realpath(__file__)
 SCRIPT_DIR = os.path.dirname(SCRIPT_PATH)
 SCRIPT_NAME = os.path.basename(SCRIPT_PATH)
@@ -157,6 +159,10 @@ def get_update_check_info():
         'updateAvailable': False,
         'repoUrl': GITHUB_REPO_URL,
         'releaseUrl': f'{GITHUB_REPO_URL}/releases/latest',
+        'serverHost': CURRENT_SERVER_HOST,
+        'serverPort': CURRENT_SERVER_PORT,
+        'sessionsDir': SESSIONS_DIR,
+        'backendStatus': 'running',
         'error': '',
     }
     try:
@@ -1042,7 +1048,12 @@ class ReusableHTTPServer(HTTPServer):
 
 
 def create_server(host='127.0.0.1', port=PORT):
-    return ReusableHTTPServer((host, port), Handler)
+    global CURRENT_SERVER_HOST, CURRENT_SERVER_PORT
+    server = ReusableHTTPServer((host, port), Handler)
+    bound_host, bound_port = server.server_address
+    CURRENT_SERVER_HOST = bound_host
+    CURRENT_SERVER_PORT = bound_port
+    return server
 
 
 def parse_runtime_args(argv):
